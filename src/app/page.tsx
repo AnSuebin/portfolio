@@ -1,13 +1,15 @@
 import HomeHeader from '@/components/home/HomeHeader';
-import Intro from '@/components/home/Intro';
+import HomeIntro from '@/components/home/HomeIntro';
+import HomePortfolio from '@/components/home/HomePortfolio';
+import HomeSummary from '@/components/home/HomeSummary';
 
 export default function Home() {
   return (
     <main className="relative">
       <HomeHeader />
-      <Intro />
-      <section></section>
-      <section></section>
+      <HomeIntro />
+      <HomeSummary />
+      <HomePortfolio />
     </main>
   );
 }

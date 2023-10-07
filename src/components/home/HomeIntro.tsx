@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Intro = () => {
+const HomeIntro = () => {
   return (
     <main className="flex items-center justify-center h-screen">
       <h1 className="leading-normal font-primary">
@@ -12,4 +12,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default HomeIntro;

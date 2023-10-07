@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       primary: ['SBAggroB', 'Arial', 'sans-serif'],
+      basic: ['Pretendard', 'Arial', 'sans-serif'],
     },
     colors: {
       primary: '#4B9AFD',
