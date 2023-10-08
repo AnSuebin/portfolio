@@ -9,10 +9,10 @@ interface Props {
 
 const HomePortfolioBox: FC<Props> = ({ id, type, title, subtitle }) => {
   return (
-    <section className="flex flex-col flex-1 h-full px-5 py-10 border">
+    <section className="text-lightGray  flex flex-col flex-1 h-full px-5 py-10 border cursor-pointer hover:text-[black]">
       <div>
-        <h2 className="text-3xl font-primary">0{id}</h2>
-        <p className="font-Pretendard ">{type}</p>
+        <h2 className="text-3xl font-primary ">0{id}</h2>
+        <p className=" font-Pretendard">{type}</p>
       </div>
 
       <div className="flex flex-col items-center justify-center flex-1">
