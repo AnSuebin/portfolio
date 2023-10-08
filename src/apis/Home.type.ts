@@ -1,9 +1,19 @@
 type HomePortfolioType = 'work' | 'experience';
 
-interface IHomePortfolio {
+export interface IHomePortfolio {
   id: number;
   type: HomePortfolioType;
   title: string;
   subtitle: string;
   link: string;
+}
+
+export interface IHomePortfolioDetail extends IHomePortfolio {
+  detail: string;
+  startDate: string;
+  endDate: string;
+  site?: string;
+  role: string;
+  works: string[];
+  stack: string[][];
 }

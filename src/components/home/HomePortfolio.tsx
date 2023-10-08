@@ -1,31 +1,8 @@
 import React from 'react';
 import HomePortfolioBox from './portfolio/HomePortfolioBox';
+import { portfolioList } from '@/utils/portfolio';
 
 const HomePortfolio = () => {
-  const portfolioList: IHomePortfolio[] = [
-    {
-      id: 1,
-      type: 'work',
-      title: '모션랩스',
-      subtitle: 'motion labs',
-      link: 'portfolio/revisit',
-    },
-    {
-      id: 1,
-      type: 'work',
-      title: '모션랩스',
-      subtitle: 'motion labs',
-      link: 'portfolio/revisit',
-    },
-    {
-      id: 1,
-      type: 'work',
-      title: '모션랩스',
-      subtitle: 'motion labs',
-      link: 'portfolio/revisit',
-    },
-  ];
-
   return (
     <main className="flex items-center justify-center h-screen">
       <section className="flex px-[200px] py-[180px] gap-[20px] flex-row h-full w-full">
