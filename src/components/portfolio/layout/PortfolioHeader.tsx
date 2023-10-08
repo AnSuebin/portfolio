@@ -12,7 +12,7 @@ const PortfolioHeader: FC<Props> = ({ portfolioList, selectedId }) => {
   );
   return (
     <header className="flex justify-end w-full ">
-      <div className="w-[60%] mr-6 ">
+      <div className="w-[60%] pr-6 ">
         <div className="flex w-full h-0.5">
           {portfolioList.map((portfolio) => {
             return (
