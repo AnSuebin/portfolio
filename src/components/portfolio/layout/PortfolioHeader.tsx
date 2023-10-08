@@ -1,18 +1,20 @@
-import { IHomePortfolioDetail } from '@/apis/Home.type';
+import { IHomePortfolioDetail, PortfolioIdType } from '@/apis/Home.type';
 import React, { FC } from 'react';
 
 interface Props {
   portfolioList: IHomePortfolioDetail[];
-  selectedId: number;
+  selectedId: PortfolioIdType;
+  selectedPortfolio: IHomePortfolioDetail;
 }
 
-const PortfolioHeader: FC<Props> = ({ portfolioList, selectedId }) => {
-  const filteredPortfolio = portfolioList.filter(
-    (portfolio) => portfolio.id === selectedId,
-  );
+const PortfolioHeader: FC<Props> = ({
+  portfolioList,
+  selectedId,
+  selectedPortfolio,
+}) => {
   return (
     <header className="flex justify-end w-full ">
-      <div className="w-[60%] pr-6 ">
+      <div className="w-[70%] pr-6 ">
         <div className="flex w-full h-0.5">
           {portfolioList.map((portfolio) => {
             return (
@@ -26,7 +28,7 @@ const PortfolioHeader: FC<Props> = ({ portfolioList, selectedId }) => {
           })}
         </div>
         <h2 className="mt-10 whitespace-break-spaces">
-          {filteredPortfolio[0]?.detail}
+          {selectedPortfolio.detail}
         </h2>
       </div>
     </header>
