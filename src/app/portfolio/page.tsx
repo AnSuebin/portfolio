@@ -14,11 +14,7 @@ const PortfolioPage = () => {
 
   return (
     <div className="flex flex-col w-full h-screen max-w-screen-xl mx-auto overflow-auto">
-      <PortfolioHeader
-        portfolioList={portfolioDetail}
-        selectedId={selectedId}
-        selectedPortfolio={filteredPortfolio[0] || []}
-      />
+      <PortfolioHeader selectedPortfolio={filteredPortfolio[0] || []} />
       <main className="flex flex-row flex-1">
         <PortfolioMenu
           portfolioList={portfolioDetail}

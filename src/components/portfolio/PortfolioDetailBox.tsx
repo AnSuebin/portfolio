@@ -7,11 +7,11 @@ interface Props {
 
 const PortfolioDetailBox: FC<Props> = ({ selectedPortfolio }) => {
   return (
-    <main className="flex flex-col  w-[70%] h-full py-5 ">
+    <main className="flex flex-col w-[70%] h-full py-5 ">
       <section className="flex items-center justify-center flex-1 w-full">
         image
       </section>
-      <section className="pt-5 flex h-[380px]">
+      <section className="flex pt-5 h-portfolioBottom">
         <div className="flex-1">
           <h2 className="text-2xl font-bold">Works</h2>
           <ul className="mt-8 text-sm">

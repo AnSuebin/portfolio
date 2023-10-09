@@ -10,14 +10,14 @@ interface Props {
 const PortfolioMenu: FC<Props> = ({ portfolioList, selectedId }) => {
   return (
     <aside className="flex flex-col justify-end flex-1 h-full p-5">
-      <div className="h-[380px] flex flex-col pt-5">
+      <div className="flex flex-col pt-5 h-portfolioBottom">
         {portfolioList.map((portfolio) => {
           return (
             <Link href={portfolio.link}>
               <div
                 key={`portfolio-menu-${portfolio.id}`}
                 className={`py-2 cursor-pointer text ${
-                  portfolio.id === selectedId ? 'text-black' : 'text-lightGray'
+                  portfolio.id === selectedId ? 'text-black' : 'text-darkGray'
                 } hover:text-black font-bold`}
               >
                 {portfolio.title}

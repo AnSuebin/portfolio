@@ -11,12 +11,21 @@ module.exports = {
       second: '#3398FF',
       black: '#222222',
       red: '#FF5A4F',
-      darkGray: '#313A47',
-      lightGray: '#929BA4',
+      darkGray: '#7E7E7E',
+      lightGray: '#C1C1C1',
       background: '#F9FBFE',
       border: '#dedede',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        happyPattern: "url('/images/background/happyPattern.png')",
+        sadPattern: "url('/images/background/sadPattern.png')",
+        pattern: "url('/images/background/pattern.png')",
+      },
+      height: {
+        portfolioBottom: '300px',
+      },
+    },
   },
   plugins: [],
 };

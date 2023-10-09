@@ -1,10 +1,17 @@
+import Link from 'next/link';
 import React from 'react';
 
 const HomeHeader = () => {
   return (
-    <header className="flex justify-between w-full px-5 py-6 border-b-[1.5px] border-lightGray bg-background">
-      <div>Frontend Developer </div>
-      <div>About ANSOOBIN</div>
+    <header className="fixed w-full max-w-screen-xl top-0 cursor-pointer flex border-b-[1.5px] border-lightGray bg-background">
+      <Link href={'/'}>
+        <div className="mx-5 mt-5 mb-3">
+          <div className="text-lg font-extrabold">ANSOOBIN</div>
+          <div className="text-sm font-semibold text-darkGray">
+            Frontend Developer
+          </div>
+        </div>
+      </Link>
     </header>
   );
 };
