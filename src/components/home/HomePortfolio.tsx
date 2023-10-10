@@ -1,21 +1,12 @@
 'use client';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+
+import React from 'react';
 import HomePortfolioBox from './portfolio/HomePortfolioBox';
 import { portfolioList } from '@/utils/portfolio';
-import { useInView } from 'react-intersection-observer';
+import useScrollToObserver from '@/hooks/useScrolltoObserver';
 
 const HomePortfolio = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [viewRef, inView] = useInView();
-
-  useEffect(() => {
-    if (!!scrollRef.current && inView) {
-      scrollRef.current.scrollIntoView({
-        behavior: 'auto',
-        block: 'start',
-      });
-    }
-  }, [inView, scrollRef]);
+  const { scrollRef, viewRef } = useScrollToObserver();
 
   return (
     <main className="flex items-center justify-center h-screen" ref={scrollRef}>

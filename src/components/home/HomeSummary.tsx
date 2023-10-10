@@ -1,22 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import profileImage from '../../../public/images/profile.png';
-import { useInView } from 'react-intersection-observer';
+import useScrollToObserver from '@/hooks/useScrolltoObserver';
 
 const HomeSummary = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [viewRef, inView] = useInView();
-
-  useEffect(() => {
-    if (!!scrollRef.current && inView) {
-      scrollRef.current.scrollIntoView({
-        behavior: 'auto',
-        block: 'start',
-      });
-    }
-  }, [inView, scrollRef]);
+  const { scrollRef, viewRef } = useScrollToObserver();
 
   return (
     <main className="flex items-center justify-center h-screen" ref={scrollRef}>
