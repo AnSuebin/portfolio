@@ -1,19 +1,32 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import profileImage from '../../../public/images/profile.png';
-import useScrollToObserver from '@/hooks/useScrolltoObserver';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import useScrollToObserver from '@/hooks/useScrollToObserver';
 
 const HomeSummary = () => {
-  const { scrollRef, viewRef } = useScrollToObserver();
+  const { scrollRef, viewRef, inView } = useScrollToObserver();
+
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
   return (
     <main className="flex items-center justify-center h-screen" ref={scrollRef}>
-      <section className="flex items-center justify-between px-[100px] py-[180px] h-full w-full">
+      <motion.section
+        className="flex items-center justify-between px-[100px] py-[180px] h-full w-full"
+        ref={viewRef}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={variants}
+      >
         <Image src={profileImage} width={400} height={400} alt="profile" />
         <div className="ml-10">
-          <h3 className="mb-10 text-2xl font-primary" ref={viewRef}>
+          <h3 className="mb-10 text-2xl font-primary">
             리트리버 프론트엔드 개발자_ 안수빈
           </h3>
 
@@ -31,7 +44,7 @@ const HomeSummary = () => {
             같은 말도 따뜻하게 한다면 관계도, 결과도 더욱 좋을 것이라 믿습니다.
           </article>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 };

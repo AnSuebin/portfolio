@@ -3,7 +3,10 @@ import { useInView } from 'react-intersection-observer';
 
 const useScrollToObserver = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [viewRef, inView] = useInView();
+
+  const { ref: viewRef, inView } = useInView({
+    threshold: 0.5,
+  });
 
   useEffect(() => {
     if (!!scrollRef.current && inView) {
@@ -16,6 +19,7 @@ const useScrollToObserver = () => {
   return {
     scrollRef,
     viewRef,
+    inView,
   };
 };
 

@@ -13,12 +13,13 @@
     "@tanstack/react-query-devtools": "^4.36.1",
     "@tanstack/react-query-next-experimental": "^5.0.0-alpha.80",
     "@typescript-eslint/parser": "^6.7.4",
-    "intersection-observer": "^0.12.2",
+    "framer-motion": "^10.16.4",
     "next": "^13.5.4",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.5.2"
+    "react-intersection-observer": "^9.5.2",
+    "react-kr-typing-anim": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",
