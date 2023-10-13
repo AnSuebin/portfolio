@@ -5,8 +5,6 @@ import Image from 'next/image';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import useScrollToObserver from '@/hooks/useScrollToObserver';
-
 import profileImage from '../../../public/images/profile.png';
 
 const HomeSummary = () => {
@@ -41,7 +39,7 @@ const HomeSummary = () => {
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             variants={textVariants}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
           >
             리트리버 프론트엔드 개발자_ 안수빈
           </motion.h3>
@@ -50,7 +48,7 @@ const HomeSummary = () => {
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
             variants={textVariants}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             리트리버는 시각 안내 도우미를 꿈꾸는 견종입니다. <br />저 또한
             누군가의 따뜻한 눈이 되는 프론트엔드 개발자를 꿈꾸며 성장합니다.
