@@ -17,4 +17,5 @@ export interface IHomePortfolioDetail extends IHomePortfolio {
   role: string;
   works: string[];
   stack: string[];
+  images: string[];
 }
