@@ -1,5 +1,8 @@
-import { IHomePortfolioDetail } from '@/apis/Home.type';
+import Image from 'next/image';
+import image from 'public/images/portfolio/revisit/revisit1.png';
 import React, { FC } from 'react';
+
+import { IHomePortfolioDetail } from '@/apis/Home.type';
 
 interface Props {
   selectedPortfolio: IHomePortfolioDetail;
@@ -8,8 +11,8 @@ interface Props {
 const PortfolioDetailBox: FC<Props> = ({ selectedPortfolio }) => {
   return (
     <main className="flex flex-col w-[70%] h-full py-5 ">
-      <section className="flex items-center justify-center flex-1 w-full">
-        image
+      <section className="flex items-center justify-center flex-1 w-full ">
+        {/* <Image alt={selectedPortfolio.title} src={image} fill /> */}
       </section>
       <section className="flex pt-5 h-portfolioBottom">
         <div className="flex-1">

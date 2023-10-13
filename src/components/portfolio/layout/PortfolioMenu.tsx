@@ -13,7 +13,7 @@ const PortfolioMenu: FC<Props> = ({ portfolioList, selectedId }) => {
       <div className="flex flex-col pt-5 h-portfolioBottom">
         {portfolioList.map((portfolio) => {
           return (
-            <Link href={portfolio.link}>
+            <Link key={`portfolio-menu-${portfolio.id}`} href={portfolio.link}>
               <div
                 key={`portfolio-menu-${portfolio.id}`}
                 className={`py-2 cursor-pointer text ${

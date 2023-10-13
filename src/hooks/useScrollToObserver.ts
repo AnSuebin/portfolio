@@ -9,7 +9,11 @@ const useScrollToObserver = () => {
   });
 
   useEffect(() => {
-    if (!!scrollRef.current && inView) {
+    if (!scrollRef) {
+      return;
+    }
+
+    if (scrollRef.current && inView) {
       scrollRef.current.scrollIntoView({
         block: 'start',
       });

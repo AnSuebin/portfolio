@@ -1,11 +1,12 @@
 'use client';
 
-import React from 'react';
-import HomePortfolioBox from './portfolio/HomePortfolioBox';
-import { portfolioList } from '@/utils/portfolio';
-import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import React from 'react';
+
+import { portfolioList } from '@/utils/portfolio';
 import useScrollToObserver from '@/hooks/useScrollToObserver';
+
+import HomePortfolioBox from './portfolio/HomePortfolioBox';
 
 const HomePortfolio = () => {
   const { scrollRef, viewRef, inView } = useScrollToObserver();
@@ -26,7 +27,6 @@ const HomePortfolio = () => {
         <section className="flex flex-col flex-1 h-full px-5 py-10 border font-primary">
           portfolio
         </section>
-
         {portfolioList.map((portfolio, index) => (
           <HomePortfolioBox
             key={`Home-portfolio-block-${portfolio.id}`}

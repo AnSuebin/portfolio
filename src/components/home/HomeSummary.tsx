@@ -1,11 +1,12 @@
 'use client';
 
-import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
-import profileImage from '../../../public/images/profile.png';
-import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+
 import useScrollToObserver from '@/hooks/useScrollToObserver';
+
+import profileImage from '../../../public/images/profile.png';
 
 const HomeSummary = () => {
   const { scrollRef, viewRef, inView } = useScrollToObserver();
