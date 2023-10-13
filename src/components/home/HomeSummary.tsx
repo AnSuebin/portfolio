@@ -3,35 +3,55 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import useScrollToObserver from '@/hooks/useScrollToObserver';
 
 import profileImage from '../../../public/images/profile.png';
 
 const HomeSummary = () => {
-  const { scrollRef, viewRef, inView } = useScrollToObserver();
+  const { ref: viewRef, inView } = useInView({
+    threshold: 0.5,
+  });
 
-  const variants = {
+  const imageVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
-  return (
-    <main className="flex items-center justify-center h-screen" ref={scrollRef}>
-      <motion.section
-        className="flex items-center justify-between px-[100px] py-[180px] h-full w-full"
-        ref={viewRef}
-        initial="hidden"
-        animate={inView ? 'visible' : 'hidden'}
-        variants={variants}
-      >
-        <Image src={profileImage} width={400} height={400} alt="profile" />
-        <div className="ml-10">
-          <h3 className="mb-10 text-2xl font-primary">
-            리트리버 프론트엔드 개발자_ 안수빈
-          </h3>
+  const textVariants = {
+    hidden: { opacity: 0, y: '50%' },
+    visible: { opacity: 1, y: 0 },
+  };
 
-          <article>
+  return (
+    <main className="flex items-center justify-center h-screen" ref={viewRef}>
+      <section className="flex items-center justify-between px-[100px] py-[180px] h-full w-full">
+        <motion.div
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={imageVariants}
+          transition={{ duration: 1 }}
+        >
+          <Image src={profileImage} width={400} height={400} alt="profile" />
+        </motion.div>
+        <div className="ml-10">
+          <motion.h3
+            className="mb-10 text-2xl font-primary"
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={textVariants}
+            transition={{ duration: 0.8 }}
+          >
+            리트리버 프론트엔드 개발자_ 안수빈
+          </motion.h3>
+
+          <motion.article
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={textVariants}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             리트리버는 시각 안내 도우미를 꿈꾸는 견종입니다. <br />저 또한
             누군가의 따뜻한 눈이 되는 프론트엔드 개발자를 꿈꾸며 성장합니다.
             <br />
@@ -43,9 +63,9 @@ const HomeSummary = () => {
             <br />
             따뜻하게 교류하려 노력합니다. <br />
             같은 말도 따뜻하게 한다면 관계도, 결과도 더욱 좋을 것이라 믿습니다.
-          </article>
+          </motion.article>
         </div>
-      </motion.section>
+      </section>
     </main>
   );
 };
