@@ -5,7 +5,7 @@ import PortfolioDetailBox from '@/components/portfolio/PortfolioDetailBox';
 import PortfolioHeader from '@/components/portfolio/layout/PortfolioHeader';
 import PortfolioMenu from '@/components/portfolio/layout/PortfolioMenu';
 
-const page = ({ params }: { params: { slug: string } }) => {
+const PortfolioDetailPage = ({ params }: { params: { slug: string } }) => {
   const selectedId = params.slug;
 
   const filteredPortfolio = portfolioDetail.filter(
@@ -26,4 +26,4 @@ const page = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default page;
+export default PortfolioDetailPage;
