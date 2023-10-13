@@ -38,6 +38,7 @@ export const portfolioDetail: IHomePortfolioDetail[] = [
     title: 'revisit',
     subtitle: '모션랩스',
     link: 'revisit',
+    images: ['revisit1.png', 'revisit2.png', 'revisit3.png', 'revisit4.png'],
     detail:
       '병원 진료 토탈 솔루션 SaaS 프로그램 입니다.\nMVP 제작에 참여하였고, 유지보수를 담당하고 있습니다.',
     startDate: '2023.04.01',
@@ -61,6 +62,7 @@ export const portfolioDetail: IHomePortfolioDetail[] = [
     title: '폼폼폼',
     subtitle: '항해99 10기',
     link: 'fff',
+    images: ['fff1.png', 'fff2.png', 'fff3.png', 'fff4.png'],
     detail:
       '기존 설문조사 사이트의 사용성을 UI•UX적으로 개선한 프로젝트입니다.',
     startDate: '2023.04.01',
@@ -80,9 +82,10 @@ export const portfolioDetail: IHomePortfolioDetail[] = [
   {
     id: 'bank',
     type: 'experience',
-    title: '국민은행 액티브 시니어 타겟 온보딩 페이지',
+    title: '국민은행 액티브 시니어 온보딩 페이지',
     subtitle: 'Numble',
     link: 'bank',
+    images: ['bank1.gif', 'bank2.gif', 'bank3.gif', 'bank4.gif'],
     detail:
       '액티브 시니어 타켓을 대상으로, 은행 온보딩 페이지를 제작한 프로젝트입니다.',
     startDate: '2023.04.01',
@@ -103,6 +106,7 @@ export const portfolioDetail: IHomePortfolioDetail[] = [
     title: '탐나는 예약 시스템',
     subtitle: '제주 더큰내일센터',
     link: 'tamnaye',
+    images: ['tamnaye1.gif', 'tamnaye2.png', 'tamnaye3.png', 'tamnaye4.png'],
     detail:
       '센터에서 회의실 예약 시, 수기 작성 시스템의 불편함을 개선하고자 기획한 프로젝트입니다.',
     startDate: '2023.04.01',

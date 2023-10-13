@@ -2,11 +2,12 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import image from 'public/images/portfolio/revisit/revisit1.png';
 import React, { FC } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import { IHomePortfolioDetail } from '@/apis/Home.type';
+
+import Carousel from '../commons/Carousel';
 
 interface Props {
   selectedPortfolio: IHomePortfolioDetail;
@@ -23,9 +24,12 @@ const PortfolioDetailBox: FC<Props> = ({ selectedPortfolio }) => {
   };
 
   return (
-    <main className="flex flex-col w-[70%] h-full py-5" ref={viewRef}>
-      <section className="flex items-center justify-center flex-1 w-full ">
-        {/* <Image alt={selectedPortfolio.title} src={image} fill /> */}
+    <main className="flex flex-col w-[70%] h-full py-5 " ref={viewRef}>
+      <section className="relative flex-1 w-full">
+        <Carousel
+          type={selectedPortfolio.id}
+          images={selectedPortfolio.images}
+        />
       </section>
       <section className="flex pt-5 h-portfolioBottom">
         <div className="flex-1">
