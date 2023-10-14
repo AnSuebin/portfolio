@@ -35,18 +35,18 @@ const Carousel: FC<Props> = ({ type, images, isMobile = false }) => {
         data-carousel="slide"
         className="w-full gap-4 mt-5 "
       >
-        <div className="w-full ">
+        <div className="w-full h-[400px] flex justify-center items-center bg-[lightGray]">
           {images.map((image, index) => {
             return (
               <div
                 key={`portfolio-detail-image-${image}`}
-                className={`${index !== currentIndex && 'hidden'}`}
+                className={`${index !== currentIndex && 'hidden'} `}
                 data-carousel-item
               >
                 <Image
                   alt={`portfolio detail ${image}`}
                   src={require(`public/images/portfolio/${type}/${image}`)}
-                  sizes="(min-width:1024px) 400px, 800px"
+                  height={400}
                 />
               </div>
             );
