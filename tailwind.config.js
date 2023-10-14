@@ -6,6 +6,14 @@ module.exports = {
       primary: ['SBAggroB', 'Arial', 'sans-serif'],
       basic: ['Pretendard', 'Arial', 'sans-serif'],
     },
+    fontSize: {
+      title: [
+        '3rem',
+        {
+          lineHeight: '1.5',
+        },
+      ],
+    },
     colors: {
       primary: '#4B9AFD',
       second: '#3398FF',
