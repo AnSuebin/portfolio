@@ -13,6 +13,24 @@ module.exports = {
           lineHeight: '1.5',
         },
       ],
+      subTitle: [
+        '2rem',
+        {
+          lineHeight: '1.5',
+        },
+      ],
+      mobileTitle: [
+        '2rem',
+        {
+          lineHeight: '1.5',
+        },
+      ],
+      mobileSubTitle: [
+        '1.5rem',
+        {
+          lineHeight: '1.5',
+        },
+      ],
     },
     colors: {
       primary: '#4B9AFD',

@@ -3,5 +3,5 @@ export const isMobile = () => {
     return;
   }
 
-  return window.innerWidth <= 468 ? true : false;
+  return window.innerWidth <= 1024 ? true : false;
 };
