@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 import { IHomePortfolioDetail, PortfolioIdType } from '@/apis/Home.type';
 
