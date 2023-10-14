@@ -50,11 +50,12 @@ const Carousel: FC<Props> = ({ type, images }) => {
         {images.map((image, index) => {
           return (
             <div
+              key={`portfolio-detail-image-${image}`}
               className={`${index !== currentIndex && 'hidden'}`}
               data-carousel-item
             >
               {/* <Image
-                key={`portfolio-detail-image-${image}`}
+            
                 alt={`portfolio detail ${image}`}
                 src={require(`public/images/portfolio/${type}/${image}`)}
                 height={480}
