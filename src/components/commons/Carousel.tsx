@@ -35,24 +35,24 @@ const Carousel: FC<Props> = ({ type, images, isMobile = false }) => {
         data-carousel="slide"
         className="w-full gap-4 mt-5 "
       >
-        <div className="w-full ">
+        <div className="w-full h-[400px] flex justify-center items-center bg-[lightGray]">
           {images.map((image, index) => {
             return (
               <div
                 key={`portfolio-detail-image-${image}`}
-                className={`${index !== currentIndex && 'hidden'}`}
+                className={`${index !== currentIndex && 'hidden'} `}
                 data-carousel-item
               >
                 <Image
                   alt={`portfolio detail ${image}`}
                   src={require(`public/images/portfolio/${type}/${image}`)}
-                  sizes="(min-width:1024px) 400px, 800px"
+                  height={400}
                 />
               </div>
             );
           })}
         </div>
-        <div className="flex justify-center w-full mt-5">
+        <div className="flex justify-center w-full mt-5 ">
           <div className="flex gap-2">
             {images.map((image, index) => {
               return (
@@ -92,7 +92,7 @@ const Carousel: FC<Props> = ({ type, images, isMobile = false }) => {
           );
         })}
       </div>
-      <div className="overflow-hidden md:h-[420px] mt-[20px] w-full">
+      <div className="overflow-hidden h-[420px] mt-[20px] w-full bg-[lightGray] flex justify-center">
         {images.map((image, index) => {
           return (
             <div

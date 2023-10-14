@@ -52,7 +52,7 @@ const PortfolioBox: FC<Props> = ({ selectedId }) => {
   }
 
   return (
-    <main>
+    <main className="h-full">
       <PortfolioHeader selectedPortfolio={filteredPortfolio[0] || []} />
       <main className="flex flex-row flex-1 overflow-y-hidden">
         <PortfolioMenu

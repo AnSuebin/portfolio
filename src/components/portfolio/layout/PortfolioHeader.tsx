@@ -23,7 +23,7 @@ const PortfolioHeader: FC<Props> = ({ selectedPortfolio }) => {
   const splitLineDetail = selectedPortfolio.detail.split('\n');
 
   return (
-    <header className="flex justify-end w-full mt-[100px]" ref={viewRef}>
+    <header className="flex justify-end w-full mt-[100px] h-20" ref={viewRef}>
       <div className="w-[70%] mb-5">
         {splitLineDetail.map((detail, index) => (
           <motion.h2

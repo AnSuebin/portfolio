@@ -13,9 +13,9 @@ interface Props {
 
 const PortfolioMenu: FC<Props> = ({ portfolioList, selectedId }) => {
   return (
-    <aside className="flex flex-col justify-end flex-1 h-full p-5">
-      <div className="flex flex-col pt-5 h-portfolioBottom">
-        {portfolioList.map((portfolio, index) => {
+    <aside className="flex flex-col flex-1 h-full px-5">
+      <div className="flex flex-col h-portfolioBottom">
+        {portfolioList.map((portfolio) => {
           return (
             <Link key={`portfolio-menu-${portfolio.id}`} href={portfolio.link}>
               <motion.div
