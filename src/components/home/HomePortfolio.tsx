@@ -11,6 +11,7 @@ import HomePortfolioBox from './portfolio/HomePortfolioBox';
 const HomePortfolio = () => {
   const { ref: viewRef, inView } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
   const variants = {
     hidden: { opacity: 0 },

@@ -10,6 +10,7 @@ import profileImage from '../../../public/images/profile.png';
 const HomeSummary = () => {
   const { ref: viewRef, inView } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
 
   const imageVariants = {
