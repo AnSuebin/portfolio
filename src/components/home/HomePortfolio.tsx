@@ -2,21 +2,23 @@
 
 import { motion } from 'framer-motion';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { portfolioList } from '@/utils/portfolio';
-import useScrollToObserver from '@/hooks/useScrollToObserver';
 
 import HomePortfolioBox from './portfolio/HomePortfolioBox';
 
 const HomePortfolio = () => {
-  const { scrollRef, viewRef, inView } = useScrollToObserver();
+  const { ref: viewRef, inView } = useInView({
+    threshold: 0.5,
+  });
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
   return (
-    <main className="flex items-center justify-center h-screen" ref={scrollRef}>
+    <main className="flex items-center justify-center h-screen">
       <motion.section
         className="flex px-[50px] py-[180px] gap-[20px] flex-col lg:flex-row lg:h-full w-full "
         ref={viewRef}
