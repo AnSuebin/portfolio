@@ -7,7 +7,7 @@ const HomeHeader = () => {
       <Link href={'/'}>
         <div className="mx-5 mt-5 mb-3">
           <div className="text-lg font-extrabold">ANSOOBIN</div>
-          <div className="text-sm font-semibold text-darkGray">
+          <div className="text-[0.9rem] font-semibold text-darkGray">
             Frontend Developer
           </div>
         </div>

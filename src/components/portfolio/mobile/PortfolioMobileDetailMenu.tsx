@@ -21,7 +21,7 @@ const PortfolioMobileDetailMenu: FC<Props> = ({
           <Link key={`portfolio-menu-${portfolio.id}`} href={portfolio.link}>
             <div
               key={`portfolio-menu-${portfolio.id}`}
-              className={`cursor-pointer text-[0.8rem] ${
+              className={`cursor-pointer text-[0.9rem] ${
                 portfolio.id === selectedId
                   ? 'text-black border-b-2'
                   : 'text-darkGray '
