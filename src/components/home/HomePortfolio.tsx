@@ -18,13 +18,13 @@ const HomePortfolio = () => {
   return (
     <main className="flex items-center justify-center h-screen" ref={scrollRef}>
       <motion.section
-        className="flex px-[50px] py-[180px] gap-[20px] flex-row h-full w-full"
+        className="flex px-[50px] py-[180px] gap-[20px] flex-col lg:flex-row lg:h-full w-full "
         ref={viewRef}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
         variants={variants}
       >
-        <section className="flex flex-col flex-1 h-full px-5 py-10 border font-primary">
+        <section className="flex flex-col flex-1 px-5 py-5 border lg:py-10 h-100px lg:h-full font-primary ">
           portfolio
         </section>
         {portfolioList.map((portfolio, index) => (

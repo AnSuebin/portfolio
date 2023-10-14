@@ -23,9 +23,10 @@ const HomeSummary = () => {
   };
 
   return (
-    <main className="flex items-center justify-center h-screen" ref={viewRef}>
-      <section className="flex items-center justify-between px-[100px] py-[180px] h-full w-full">
+    <main className="flex items-center justify-center h-screen " ref={viewRef}>
+      <section className="flex flex-col items-center justify-between px-[50px] lg:px-[100px] lg:py-[180px] text-center lg:text-start h-full w-full lg:flex-row">
         <motion.div
+          className="lg:w-4 lg:h-4"
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
           variants={imageVariants}
@@ -33,7 +34,7 @@ const HomeSummary = () => {
         >
           <Image src={profileImage} width={400} height={400} alt="profile" />
         </motion.div>
-        <div className="ml-10">
+        <div className="mt-10 lg:ml-10 lg:mt-0 ">
           <motion.h3
             className="mb-10 text-2xl font-primary"
             initial="hidden"

@@ -53,12 +53,12 @@ const Carousel: FC<Props> = ({ type, images }) => {
               className={`${index !== currentIndex && 'hidden'}`}
               data-carousel-item
             >
-              <Image
+              {/* <Image
                 key={`portfolio-detail-image-${image}`}
                 alt={`portfolio detail ${image}`}
                 src={require(`public/images/portfolio/${type}/${image}`)}
                 height={480}
-              />
+              /> */}
             </div>
           );
         })}

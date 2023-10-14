@@ -1,6 +1,7 @@
-import { HomePortfolioType, PortfolioIdType } from '@/apis/Home.type';
 import Link from 'next/link';
 import React, { FC } from 'react';
+
+import { HomePortfolioType, PortfolioIdType } from '@/apis/Home.type';
 
 interface Props {
   numberId: number;
@@ -22,7 +23,7 @@ const HomePortfolioBox: FC<Props> = ({
   return (
     <Link
       href={link}
-      className="text-lightGray flex flex-col flex-1 h-full  px-5 py-10 border cursor-pointer hover:text-[black]"
+      className="text-lightGray flex  flex-row lg:flex-col flex-1 h-100px lg:h-full px-5 py-5 lg:py-10 border cursor-pointer hover:text-[black]"
     >
       <div>
         <h2 className="text-3xl font-primary">0{numberId}</h2>
