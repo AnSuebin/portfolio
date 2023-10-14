@@ -6,6 +6,7 @@ const useScrollToObserver = () => {
 
   const { ref: viewRef, inView } = useInView({
     threshold: 0.5,
+    triggerOnce: true,
   });
 
   useEffect(() => {
