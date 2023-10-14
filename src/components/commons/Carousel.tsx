@@ -52,7 +52,7 @@ const Carousel: FC<Props> = ({ type, images, isMobile = false }) => {
             );
           })}
         </div>
-        <div className="flex justify-center w-full mt-5">
+        <div className="flex justify-center w-full mt-5 ">
           <div className="flex gap-2">
             {images.map((image, index) => {
               return (
@@ -92,7 +92,7 @@ const Carousel: FC<Props> = ({ type, images, isMobile = false }) => {
           );
         })}
       </div>
-      <div className="overflow-hidden md:h-[420px] mt-[20px] w-full">
+      <div className="overflow-hidden h-[420px] mt-[20px] w-full bg-[lightGray] flex justify-center">
         {images.map((image, index) => {
           return (
             <div
