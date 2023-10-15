@@ -38,7 +38,6 @@ const PortfolioMenu: FC<Props> = ({ portfolioList, selectedId }) => {
                     href={site.link}
                   >
                     <motion.div
-                      key={`portfolio-menu-${portfolio.id}`}
                       className={`ml-3  py-1 cursor-pointer text-[0.8rem] text-darkGray hover:text-black font-bold`}
                     >
                       {`${site.title}`}
