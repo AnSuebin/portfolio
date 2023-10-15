@@ -5,7 +5,6 @@ import React, { FC, useEffect, useState } from 'react';
 import { portfolioDetail } from '@/utils/portfolio';
 import { isMobile } from '@/utils/common';
 
-import Carousel from '../commons/Carousel';
 import PortfolioHeader from './layout/PortfolioHeader';
 import PortfolioMenu from './layout/PortfolioMenu';
 import PortfolioMobileDetailBox from './mobile/PortfolioMobileDetailBox';
