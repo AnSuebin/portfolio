@@ -5,11 +5,11 @@ import React, { FC, useEffect, useState } from 'react';
 import { portfolioDetail } from '@/utils/portfolio';
 import { isMobile } from '@/utils/common';
 
-import Carousel from '../commons/Carousel';
 import PortfolioHeader from './layout/PortfolioHeader';
 import PortfolioMenu from './layout/PortfolioMenu';
 import PortfolioMobileDetailBox from './mobile/PortfolioMobileDetailBox';
 import PortfolioMobileDetailImage from './mobile/PortfolioMobileDetailImage';
+import PortfolioMobileDetailLinkBox from './mobile/PortfolioMobileDetailLinkBox';
 import PortfolioMobileDetailMenu from './mobile/PortfolioMobileDetailMenu';
 import PortfolioMobileDetailSubscribe from './mobile/PortfolioMobileDetailSubscribe';
 import PortfolioDetailBox from './PortfolioDetailBox';
@@ -37,6 +37,9 @@ const PortfolioBox: FC<Props> = ({ selectedId }) => {
         <PortfolioMobileDetailMenu
           portfolioList={portfolioDetail}
           selectedId={filteredPortfolio[0].id}
+        />
+        <PortfolioMobileDetailLinkBox
+          selectedPortfolio={filteredPortfolio[0] || []}
         />
         <PortfolioMobileDetailImage
           selectedPortfolio={filteredPortfolio[0] || []}
