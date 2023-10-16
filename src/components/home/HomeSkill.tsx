@@ -105,6 +105,21 @@ const HomeSkill = () => {
             transition={{ duration: 0.3, delay: 0.2 }}
           >
             <h3 className="py-0.5 px-2 font-extrabold text-[#fff] bg-darkGray">
+              Next.js
+            </h3>
+            <p className="mt-1">
+              • 포트폴리오를 Next.js 13으로 제작하였습니다. <br />• Next.js 12로
+              제작된 웹사이트의 유지보수를 담당하고 있습니다.
+            </p>
+          </motion.article>
+          <motion.article
+            className="mt-3"
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={textVariants}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            <h3 className="py-0.5 px-2 font-extrabold text-[#fff] bg-darkGray">
               DevOps
             </h3>
             <p className="mt-1">
