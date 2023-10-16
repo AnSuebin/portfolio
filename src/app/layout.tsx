@@ -1,14 +1,17 @@
-import Providers from '@/utils/provider';
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-import './globals.css';
-import HomeHeader from '@/components/home/HomeHeader';
+
 import HomeBottom from '@/components/home/HomeBottom';
+import HomeHeader from '@/components/home/HomeHeader';
+import Providers from '@/utils/provider';
+
+import './globals.css';
+
 const openSans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'portfolio',
-  description: 'portfolio about AN',
+  title: 'An-Portfolio',
+  description: '새로운 세상을 여는 프론트엔드 개발자 안수빈입니다',
 };
 
 export default function RootLayout({
