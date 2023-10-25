@@ -24,8 +24,11 @@ const HomeSkill = () => {
   };
 
   return (
-    <main className="flex items-center justify-center h-screen " ref={viewRef}>
-      <section className="flex flex-col items-center justify-center lg:justify-between px-[50px] lg:px-[100px] lg:py-[180px]  h-full w-full lg:flex-row">
+    <main
+      className="flex items-center justify-center mt-[180px] lg:mt-0 lg:h-screen "
+      ref={viewRef}
+    >
+      <section className="flex flex-col items-center justify-center lg:justify-between px-[50px] lg:px-[100px] lg:py-[180px] lg:h-full w-full lg:flex-row">
         <div className="mt-10 lg:ml-10 lg:mt-0 ">
           <motion.h3
             className="mb-10 text-mobileSubTitle lg:text-subTitle font-primary whitespace-break-spaces lg:whitespace-normal"
