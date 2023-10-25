@@ -19,7 +19,7 @@ const HomePortfolio = () => {
   };
 
   return (
-    <main className="flex items-center justify-center h-screen">
+    <main className="flex items-center justify-center lg:h-screen">
       <motion.section
         className="flex px-[50px] py-[180px] gap-[20px] flex-col lg:flex-row lg:h-full w-full "
         ref={viewRef}
