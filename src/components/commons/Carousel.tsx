@@ -104,6 +104,8 @@ const Carousel: FC<Props> = ({ type, images, isMobile = false }) => {
                 alt={`portfolio detail ${image}`}
                 src={require(`public/images/portfolio/${type}/${image}`)}
                 height={480}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
               />
             </div>
           );
