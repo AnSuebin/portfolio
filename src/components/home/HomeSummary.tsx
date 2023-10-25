@@ -32,8 +32,11 @@ const HomeSummary = () => {
   };
 
   return (
-    <main className="flex items-center justify-center h-screen " ref={viewRef}>
-      <section className="flex flex-col items-center justify-center lg:justify-between px-[50px] lg:px-[100px] lg:py-[180px] text-center lg:text-start h-full w-full lg:flex-row">
+    <main
+      className="flex items-center justify-center lg:h-screen mt-[180px] lg:mt-0"
+      ref={viewRef}
+    >
+      <section className="flex flex-col items-center justify-center lg:justify-between px-[50px] lg:px-[100px] lg:py-[180px] text-center lg:text-start lg:h-full w-full lg:flex-row">
         <motion.div
           className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]"
           initial="hidden"
